@@ -65,7 +65,80 @@ export default function App() {
   );
 }
 
+//Styles used for styling various components
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 50,
+    backgroundColor: 'white'
+  },
+  flexbox: {
+    display:'flex',  //this makes it child component of main container
+    flexDirection: 'row',
+    paddingHorizontal: 20,
+    alignItems: 'center',
+  },
+  profileImg: {
+    width: 92,
+    height: 92,
+    borderRadius: 50,
+    marginRight: 10,
+  },
+  grpName: {
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+  grpUsername: {
+    color: 'purple',
+  },
+  grpBio: {
+    marginTop: 4,
+  },
+  nav1: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 20,
+  },
+  nav1Box: {
+    alignItems: 'center',
+  },
+  navNum: {
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+  buyBtn: {
+    backgroundColor: 'beige',
+    margin: 20,
+    borderRadius: 8,
+    paddingVertical: 12,
+    alignItems: 'center', // to align text within btn in center
+  },
+  buyBtnText: {
+    fontWeight: 'bold',
+  },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',          // to wrap images inside the grid
+    marginHorizontal: 4,
+    justifyContent: 'center',
+  },
+  gridImage: {
+    width: 150,
+    height: 130,
+    margin: 4,
+    borderRadius: 8,
+  },
+  nav2: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10,
+    borderTopWidth: 3,
+    borderColor: 'purple',
+    marginTop: 16,
+  },
+  nav2Icon: {
+    fontSize: 18,
+  },
 });
 
 // Image References
