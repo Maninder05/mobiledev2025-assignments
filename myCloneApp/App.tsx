@@ -36,6 +36,7 @@ export default function App() {
           <Text>Varieties</Text>
         </View>
       </View>
+      
       {/* Buy Button */}
       {/* Here onPress {handleBtnClick} fxn will be called which in response alerts the output */}
        <Pressable style={styles.buyBtn} onPress={handleBtnClick}>
@@ -66,6 +67,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
 });
+
 // Image References
 // mogra.jpg- "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fflowers-png&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAE"
 // red-rose- "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpurepng.com%2Fphoto%2F30030%2Fflower&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAL"
