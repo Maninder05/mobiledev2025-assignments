@@ -36,9 +36,41 @@ export default function App() {
           <Text>Varieties</Text>
         </View>
       </View>
+      {/* Buy Button */}
+      {/* Here onPress {handleBtnClick} fxn will be called which in response alerts the output */}
+       <Pressable style={styles.buyBtn} onPress={handleBtnClick}>
+        <Text style={styles.buyBtnText}>Purchase Now</Text>
+      </Pressable>
+
+      {/* Image Grid */}
+      <View style={styles.grid}>
+        <Image source={require('./assets/lily.jpg')} style={styles.gridImage} />
+        <Image source={require('./assets/mogra.jpg')} style={styles.gridImage} />
+        <Image source={require('./assets/red-rose.jpg')} style={styles.gridImage} />
+        <Image source={require('./assets/multi-shaded.jpg')} style={styles.gridImage} />
+        <Image source={require('./assets/blue.jpg')} style={styles.gridImage} />
+        <Image source={require('./assets/violet.jpg')} style={styles.gridImage} />
+    </View>
+
+      {/* Nav 2 */}
+      <View style={styles.nav2}>
+        {['🏠', '🔍', '➕', '🛒', '👤'].map((icon, index) => (
+          <Text key={index} style={styles.nav2Icon}>
+            {icon}
+          </Text>
+        ))}
+      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
 });
+// Image References
+// mogra.jpg- "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fflowers-png&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAE"
+// red-rose- "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpurepng.com%2Fphoto%2F30030%2Fflower&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAL"
+// violet- "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngfile.net%2Fphoto%2F512%2Fbeautiful-purple-flower-png-free-download&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAV"
+// blue- "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3Dwhite%2Bflower&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAf"
+// lily- "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.creativefabrica.com%2Fpng%2Fflower-png-domBxMGtV%2F&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAp"
+// multi-shaded- "https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2F231231762102164999%2F&psig=AOvVaw144DUyWGu4eLv9aITsHmjj&ust=1749008437454000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDdtKaq1I0DFQAAAAAdAAAAABAz"
+// floral-profile- "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fp%2FGypsy-Blooms-Floral-100063792962920%2F&psig=AOvVaw1q3yySEPsHkQA9S3n0N1oH&ust=1749008781303000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDOus6r1I0DFQAAAAAdAAAAABAE"
