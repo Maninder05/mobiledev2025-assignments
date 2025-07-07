@@ -8,20 +8,19 @@ import { API_HOST, API_KEY } from '../constants/ApiCall';
 
 // Dropdown Menu for the months
 const months = [
-  { label: 'January', value: '1' },
-  { label: 'February', value: '2' },
-  { label: 'March', value: '3' },
-  { label: 'April', value: '4' },
-  { label: 'May', value: '5' },
-  { label: 'June', value: '6' },
-  { label: 'July', value: '7' },
-  { label: 'August', value: '8' },
-  { label: 'September', value: '9' },
-  { label: 'October', value: '10' },
-  { label: 'November', value: '11' },
-  { label: 'December', value: '12' },
+  { label: '1', value: '1' },
+  { label: '2', value: '2' },
+  { label: '3', value: '3' },
+  { label: '4', value: '4' },
+  { label: '5', value: '5' },
+  { label: '6', value: '6' },
+  { label: '7', value: '7' },
+  { label: '8', value: '8' },
+  { label: '9', value: '9' },
+  { label: '10', value: '10' },
+  { label: '11', value: '11' },
+  { label: '12', value: '12' },
 ];
-const router= useRouter();
 
 // Method to convert month val to name
 const getMonthName = (monthNum: string) => {
@@ -33,6 +32,8 @@ const getMonthName = (monthNum: string) => {
 };
 
 export default function Facts() {
+
+  const router= useRouter();
 
   const [month, setMonth] = useState('');    //state will be updated whenever the value of month will change wrt setMonth()
   const [day, setDay] = useState('');
