@@ -83,4 +83,118 @@ export default function Facts() {
     }
   };
 
+  return (
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+ 
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+          <Ionicons name="arrow-back" size={24} color="black" />
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>Assignment Sample</Text>
+         <View style={{ width: 24 }} />
+      </View>
+     
+      <Text style={styles.label}>Select Month:</Text>
+      <RNPickerSelect
+        placeholder={{ label: 'Select', value: '' }}
+        items={months}
+        onValueChange={(value) => setMonth(value)}
+        style={pickerStyles}
+        value={month}
+      />
+ 
+      <Text style={styles.label}>Enter Day:</Text>
+      <TextInput
+        placeholder="e.g. 12"
+        keyboardType="numeric"
+        style={styles.input}
+        value={day}
+        onChangeText={setDay}
+      />
+ 
+      {fact !== '' && <Text style={styles.factText}>{fact}</Text>}
+      {error !== '' && <Text style={styles.errorText}>{error}</Text>}
+    </KeyboardAvoidingView>
+  );
+}
+ 
+// Inline Styling
+const styles = StyleSheet.create({
+   container: {
+    padding: 10,
+  },
+   header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 50,
+    marginTop: 20,
+    marginBottom: 30,
+    paddingHorizontal: 10,
+    justifyContent: 'space-between',
+  },
+  backButton: {
+    width: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    flex: 1,
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 6,
+    marginTop: 10,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#888',
+    padding: 10,
+    borderRadius: 5,
+    fontSize: 16,
+  },
+  factText: {
+    marginTop: 20,
+    fontSize: 16,
+    color: '#333',
+    fontWeight: '600',
+  },
+  errorText: {
+    marginTop: 15,
+    color: 'red',
+    fontSize: 14,
+  },
+  backButtonContainer: {
+    marginBottom: 16,
+    alignItems: 'flex-start',
+  },
+});
+ 
+const pickerStyles = {
+  inputIOS: {
+    fontSize: 16,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    borderWidth: 1,
+    borderColor: '#888',
+    borderRadius: 5,
+    color: 'black',
+    marginBottom: 10,
+  },
+  inputAndroid: {
+    fontSize: 16,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderWidth: 1,
+    borderColor: '#888',
+    borderRadius: 5,
+    color: 'black',
+    marginBottom: 10,
+  },
+};
+
   
