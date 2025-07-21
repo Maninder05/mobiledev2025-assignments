@@ -71,7 +71,7 @@ export default function Facts() {
       setError('Invalid API key or input. Try again!');
     }
   };
-
+  
  return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -113,7 +113,7 @@ export default function Facts() {
   );
 }
 
-// Inline Styling
+// Styles
 const styles = StyleSheet.create({
   container: {
     padding: 10,
